@@ -1,16 +1,23 @@
 ▲ Next.js 16.1.3 (Turbopack)
 - Local:         http://localhost:3000
-- Network:       http://21.0.6.233:3000
+- Network:       http://21.0.2.215:3000
 - Environments: .env
 
 ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
-✓ Ready in 706ms
+⚠ Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
+✓ Ready in 754ms
 ○ Compiling / ...
+prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
 prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
 prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
 prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
@@ -23,11 +30,57 @@ prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`i
 prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
 prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
 prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
- GET / 200 in 2.9s (compile: 2.4s, render: 531ms)
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+ GET / 200 in 2.8s (compile: 2.3s, render: 456ms)
+prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+ GET / 200 in 88ms (compile: 2ms, render: 85ms)
+ GET / 200 in 8.7s (compile: 8.0s, render: 729ms)
+ GET / 200 in 8.8s (compile: 8.0s, render: 792ms)
 prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
 prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
+⚠ Cross origin request detected  to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 102ms (compile: 3ms, render: 99ms)
+prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+ GET / 200 in 94ms (compile: 1954µs, render: 92ms)
+⚠ Cross origin request detected from preview-chat-80be21fe-15f8-4022-ac13-01886dc6cbc9.space-z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /api/servers?limit=100 200 in 962ms (compile: 946ms, render: 16ms)
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
 prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
 prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
 prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
-prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
  GET / 200 in 77ms (compile: 3ms, render: 74ms)
+ GET /api/servers?limit=100 200 in 19ms (compile: 3ms, render: 15ms)
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+prisma:query SELECT 1
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET / 200 in 146ms (compile: 3ms, render: 143ms)
+ GET /api/servers?limit=100 200 in 9ms (compile: 2ms, render: 6ms)
+prisma:query SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?
+prisma:query SELECT 1
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`

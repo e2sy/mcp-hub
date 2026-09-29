@@ -1,20 +1,186 @@
-[00:00:00.928] Server  LOG     ✓ Ready in 706ms
-[00:00:03.942] Server  LOG     ○ Compiling / ...
-[00:00:09.495] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
-[00:00:09.495] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
-[00:00:09.495] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.496] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.496] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.496] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.496] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
-[00:00:09.496] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
-[00:00:09.496] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.631] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.631] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.631] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.897] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
-[00:00:09.897] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
-[00:00:09.897] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.897] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.897] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
-[00:00:09.897] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:00.921] Server  WARN    ⚠ Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
+[00:00:01.024] Server  LOG     ✓ Ready in 754ms
+[00:00:04.060] Server  LOG     ○ Compiling / ...
+[00:00:09.254] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:09.255] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.255] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.255] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.255] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.255] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:09.255] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:09.255] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.255] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:09.256] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:09.256] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:09.256] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:09.256] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.256] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.257] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.257] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.388] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:09.705] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:09.706] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.706] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.706] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.706] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:09.706] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:10.527] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:10.527] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:10.527] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.527] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.527] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.528] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.538] Server  WARN    ⚠ Cross origin request detected  to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:10.750] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:10.750] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.750] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.751] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.751] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:10.751] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:14.113] Server  WARN    ⚠ Cross origin request detected from preview-chat-80be21fe-15f8-4022-ac13-01886dc6cbc9.space-z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:14.120] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" suppressHydrationWarning={true}>
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_11f68782-a26b-48e0-bef1-add29e3e81e0__="true"
+-                           bis_status="ok"
+-                           bis_frame_id="77"
+                          >
+                  ...
+
+[00:00:15.223] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:15.223] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:15.967] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:15.967] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:15.967] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:15.968] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:15.968] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:15.968] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:17.950] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" suppressHydrationWarning={true}>
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_d164396c-9f09-4bc9-85a0-dd0af12d8e06__="true"
+-                           bis_status="ok"
+-                           bis_frame_id="78"
+                          >
+                  ...
+
+[00:00:18.032] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:18.032] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:26.763] Server  LOG     prisma:query "SELECT 1"
+[00:00:26.763] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:26.763] Server  LOG     prisma:query "SELECT `main`.`Category`.`id`, `main`.`Category`.`slug`, `main`.`Category`.`name`, `main`.`Category`.`icon`, `main`.`Category`.`description`, `main`.`Category`.`count` FROM `main`.`Category` WHERE 1=1 ORDER BY `main`.`Category`.`name` ASC LIMIT ? OFFSET ?"
+[00:00:26.763] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE `main`.`McpServer`.`featured` = ? LIMIT ? OFFSET ?) AS `sub`"
+[00:00:26.763] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:26.763] Server  LOG     prisma:query "SELECT SUM(`stars`) AS `_sum$stars` FROM (SELECT `main`.`McpServer`.`stars` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:26.763] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Category`.`id` FROM `main`.`Category` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
+[00:00:31.705] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" suppressHydrationWarning={true}>
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           __processed_53030381-8984-48fc-b755-e539e3adbcf1__="true"
+-                           bis_status="ok"
+-                           bis_frame_id="78"
+                          >
+                  ...
+
+[00:00:31.734] Server  LOG     prisma:query "SELECT `main`.`McpServer`.`id`, `main`.`McpServer`.`slug`, `main`.`McpServer`.`name`, `main`.`McpServer`.`description`, `main`.`McpServer`.`longDescription`, `main`.`McpServer`.`author`, `main`.`McpServer`.`repoUrl`, `main`.`McpServer`.`homepage`, `main`.`McpServer`.`category`, `main`.`McpServer`.`tags`, `main`.`McpServer`.`installCmd`, `main`.`McpServer`.`configJson`, `main`.`McpServer`.`stars`, `main`.`McpServer`.`featured`, `main`.`McpServer`.`verified`, `main`.`McpServer`.`createdAt`, `main`.`McpServer`.`updatedAt` FROM `main`.`McpServer` WHERE 1=1 ORDER BY `main`.`McpServer`.`featured` DESC, `main`.`McpServer`.`stars` DESC LIMIT ? OFFSET ?"
+[00:00:31.734] Server  LOG     prisma:query "SELECT 1"
+[00:00:31.734] Server  LOG     prisma:query "SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`McpServer`.`id` FROM `main`.`McpServer` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`"
