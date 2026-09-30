@@ -63,3 +63,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 30 verified MCP servers across 10 categories
 - 5-page Next.js website with SEO + dynamic OG images
 - Full docs, contributing guide, CI workflow
+
