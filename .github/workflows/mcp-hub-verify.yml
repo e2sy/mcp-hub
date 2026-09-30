@@ -1,0 +1,76 @@
+name: MCP Hub Verification
+
+# Server authors: add this to your MCP server repo at .github/workflows/mcp-hub-verify.yml
+# It runs mcp-hub test on every commit and reports results to MCP Hub.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Run daily at 09:00 UTC to keep verification fresh
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Verify MCP server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install mcp-hub
+        run: npm install -g mcp-hub
+
+      - name: Build server (if package.json exists)
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+            npm run build --if-present
+          fi
+
+      - name: Run mcp-hub test
+        id: test
+        continue-on-error: true
+        run: |
+          # Extract server name from package.json or repo name
+          SERVER_NAME=$(node -e "console.log(require('./package.json').name || '${{ github.event.repository.name }}')")
+          echo "server-name=$SERVER_NAME" >> $GITHUB_OUTPUT
+          mcp-hub test "$SERVER_NAME" --ci 2>&1 | tee test-output.txt
+          echo "test-status=passed" >> $GITHUB_OUTPUT
+
+      - name: Report to MCP Hub
+        if: always()
+        env:
+          MCP_HUB_TOKEN: ${{ secrets.MCP_HUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          STATUS="failed"
+          if [ "${{ steps.test.outputs.test-status }}" = "passed" ]; then
+            STATUS="passed"
+          fi
+
+          curl -X POST https://mcp-hub.vercel.app/api/verify \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $MCP_HUB_TOKEN" \
+            -d "{
+              \"serverSlug\": \"${{ steps.test.outputs.server-name }}\",
+              \"repoUrl\": \"${{ github.event.repository.html_url }}\",
+              \"status\": \"$STATUS\",
+              \"commitSha\": \"${{ github.sha }}\",
+              \"branch\": \"${{ github.ref_name }}\",
+              \"runUrl\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"
+            }"
+
+      - name: Upload test output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcp-hub-test-output
+          path: test-output.txt

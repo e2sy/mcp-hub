@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" preserveAspectRatio="none">
+  <path d="M0,30 C150,50 350,10 600,30 C850,50 1050,10 1200,30 L1200,60 L0,60 Z" fill="#10b981" opacity="0.1">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="M0,30 C150,50 350,10 600,30 C850,50 1050,10 1200,30 L1200,60 L0,60 Z;
+              M0,30 C150,10 350,50 600,30 C850,10 1050,50 1200,30 L1200,60 L0,60 Z;
+              M0,30 C150,50 350,10 600,30 C850,50 1050,10 1200,30 L1200,60 L0,60 Z"/>
+  </path>
+  <path d="M0,35 C150,15 350,55 600,35 C850,15 1050,55 1200,35 L1200,60 L0,60 Z" fill="#10b981" opacity="0.15">
+    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+      values="M0,35 C150,15 350,55 600,35 C850,15 1050,55 1200,35 L1200,60 L0,60 Z;
+              M0,35 C150,55 350,15 600,35 C850,55 1050,15 1200,35 L1200,60 L0,60 Z;
+              M0,35 C150,15 350,55 600,35 C850,15 1050,55 1200,35 L1200,60 L0,60 Z"/>
+  </path>
+</svg>

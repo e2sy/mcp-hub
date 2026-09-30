@@ -1,0 +1,785 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-10-02T04:30:04.460Z",
+  "categories": [
+    {
+      "slug": "ai",
+      "name": "AI & ML",
+      "icon": "BrainCircuit",
+      "description": "AI model access and ML workflows"
+    },
+    {
+      "slug": "api",
+      "name": "APIs",
+      "icon": "Plug",
+      "description": "Connect to external APIs and services"
+    },
+    {
+      "slug": "cloud",
+      "name": "Cloud",
+      "icon": "Cloud",
+      "description": "AWS, GCP, Azure, and cloud infrastructure"
+    },
+    {
+      "slug": "communication",
+      "name": "Communication",
+      "icon": "MessageSquare",
+      "description": "Email, chat, and messaging integrations"
+    },
+    {
+      "slug": "data",
+      "name": "Data",
+      "icon": "BarChart3",
+      "description": "Analytics, metrics, and data pipelines"
+    },
+    {
+      "slug": "database",
+      "name": "Database",
+      "icon": "Database",
+      "description": "Query and manage databases directly from your AI assistant"
+    },
+    {
+      "slug": "devtools",
+      "name": "Dev Tools",
+      "icon": "Terminal",
+      "description": "Git, GitHub, Docker, and development workflows"
+    },
+    {
+      "slug": "filesystem",
+      "name": "File System",
+      "icon": "FolderOpen",
+      "description": "Read, write, and manage local files"
+    },
+    {
+      "slug": "productivity",
+      "name": "Productivity",
+      "icon": "Zap",
+      "description": "Notion, Slack, Linear, and other work tools"
+    },
+    {
+      "slug": "search",
+      "name": "Search",
+      "icon": "Search",
+      "description": "Web search and retrieval capabilities"
+    }
+  ],
+  "servers": [
+    {
+      "slug": "github",
+      "name": "GitHub",
+      "description": "Manage repositories, issues, PRs, and more from your AI assistant",
+      "longDescription": "Full GitHub integration. Create issues, review PRs, manage branches, search code, create releases, and automate your entire GitHub workflow with natural language.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "homepage": "https://github.com",
+      "category": "devtools",
+      "tags": [
+        "github",
+        "git",
+        "repos",
+        "prs",
+        "issues"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-github",
+      "configJson": "{\n  \"mcpServers\": {\n    \"github\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-github\"\n      ],\n      \"env\": {\n        \"GITHUB_PERSONAL_ACCESS_TOKEN\": \"ghp_YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 6800,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "filesystem",
+      "name": "Filesystem",
+      "description": "Read, write, and manage local files with configurable access boundaries",
+      "longDescription": "The official filesystem MCP server. Allows your AI assistant to read, write, create directories, move, and search files. Configure which directories are accessible for safety.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "homepage": null,
+      "category": "filesystem",
+      "tags": [
+        "files",
+        "filesystem",
+        "local",
+        "io"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-filesystem /path/to/allowed/dir",
+      "configJson": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-filesystem\",\n        \"/path/to/allowed/dir\"\n      ]\n    }\n  }\n}",
+      "stars": 5400,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "postgres",
+      "name": "PostgreSQL",
+      "description": "Query and manage your PostgreSQL databases with read/write access",
+      "longDescription": "Connect Claude or Cursor directly to your PostgreSQL database. Run SELECT queries, inspect schemas, and even perform write operations with proper guardrails. Perfect for data exploration without leaving your AI assistant.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+      "homepage": "https://modelcontextprotocol.io",
+      "category": "database",
+      "tags": [
+        "sql",
+        "postgres",
+        "database",
+        "query"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-postgres \"postgresql://user:pass@localhost:5432/db\"",
+      "configJson": "{\n  \"mcpServers\": {\n    \"postgres\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-postgres\",\n        \"postgresql://user:pass@localhost:5432/db\"\n      ]\n    }\n  }\n}",
+      "stars": 4200,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "puppeteer",
+      "name": "Puppeteer",
+      "description": "Browser automation for scraping, testing, and interacting with web pages",
+      "longDescription": "Full browser automation via Puppeteer. Navigate, click, type, screenshot, and extract content from any web page — even JavaScript-heavy SPAs.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+      "homepage": null,
+      "category": "api",
+      "tags": [
+        "puppeteer",
+        "browser",
+        "automation",
+        "scraping"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-puppeteer",
+      "configJson": "{\n  \"mcpServers\": {\n    \"puppeteer\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-puppeteer\"\n      ]\n    }\n  }\n}",
+      "stars": 3900,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "memory",
+      "name": "Memory",
+      "description": "Persistent knowledge graph for long-term memory across conversations",
+      "longDescription": "A knowledge graph-based memory system that persists across sessions. Your AI assistant can remember entities, relationships, and observations — building up contextual knowledge over time.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "homepage": null,
+      "category": "ai",
+      "tags": [
+        "memory",
+        "knowledge-graph",
+        "persistence",
+        "context"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-memory",
+      "configJson": "{\n  \"mcpServers\": {\n    \"memory\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-memory\"\n      ]\n    }\n  }\n}",
+      "stars": 3300,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "brave-search",
+      "name": "Brave Search",
+      "description": "Web and local search powered by Brave Search API",
+      "longDescription": "Give your AI assistant real-time web search capabilities. Brave Search offers privacy-focused search with both web and local results. Requires a free Brave Search API key.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+      "homepage": null,
+      "category": "search",
+      "tags": [
+        "search",
+        "web",
+        "brave",
+        "api"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-brave-search",
+      "configJson": "{\n  \"mcpServers\": {\n    \"brave-search\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-brave-search\"\n      ],\n      \"env\": {\n        \"BRAVE_API_KEY\": \"YOUR_API_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 3100,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "aws",
+      "name": "AWS",
+      "description": "Manage AWS resources, services, and infrastructure",
+      "longDescription": "Interact with AWS services through natural language. Manage EC2, S3, Lambda, RDS, and dozens of other services. Requires AWS credentials configured locally.",
+      "author": "@awslabs",
+      "repoUrl": "https://github.com/awslabs/mcp",
+      "homepage": "https://aws.amazon.com",
+      "category": "cloud",
+      "tags": [
+        "aws",
+        "cloud",
+        "ec2",
+        "s3",
+        "lambda"
+      ],
+      "installCmd": "npx -y @awslabs/mcp-aws",
+      "configJson": "{\n  \"mcpServers\": {\n    \"aws\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@awslabs/mcp-aws\"\n      ]\n    }\n  }\n}",
+      "stars": 2900,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "stripe",
+      "name": "Stripe",
+      "description": "Manage payments, customers, subscriptions, and view revenue data",
+      "longDescription": "Full Stripe integration. Query charges, manage customers, handle subscriptions, issue refunds, and analyze revenue. Perfect for SaaS founders and finance teams.",
+      "author": "@stripe",
+      "repoUrl": "https://github.com/stripe/agent-toolkit",
+      "homepage": "https://stripe.com",
+      "category": "data",
+      "tags": [
+        "stripe",
+        "payments",
+        "saas",
+        "billing"
+      ],
+      "installCmd": "npx -y @stripe/mcp-stripe",
+      "configJson": "{\n  \"mcpServers\": {\n    \"stripe\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@stripe/mcp-stripe\"\n      ],\n      \"env\": {\n        \"STRIPE_SECRET_KEY\": \"sk_live_YOUR_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 2480,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "description": "Search, read, and update your Notion workspace",
+      "longDescription": "Full Notion integration — search pages, read content, create new pages, update databases, and manage comments. Perfect for AI-assisted note-taking and project management.",
+      "author": "@makeproservices",
+      "repoUrl": "https://github.com/makenotion/notion-mcp-server",
+      "homepage": "https://notion.so",
+      "category": "productivity",
+      "tags": [
+        "notion",
+        "notes",
+        "docs",
+        "workspace"
+      ],
+      "installCmd": "npx -y @notionhq/notion-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"notion\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@notionhq/notion-mcp-server\"\n      ],\n      \"env\": {\n        \"OPENAPI_MCP_HEADERS\": \"{\\\"Authorization\\\":\\\"Bearer YOUR_TOKEN\\\",\\\"Notion-Version\\\":\\\"2022-06-28\\\"}\"\n      }\n    }\n  }\n}",
+      "stars": 2150,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "description": "Manage Supabase projects, databases, auth, and storage from your AI",
+      "longDescription": "Full Supabase integration — manage databases, run migrations, query data, manage auth users, and handle storage buckets without leaving Cursor or Claude Desktop.",
+      "author": "@supabase",
+      "repoUrl": "https://github.com/supabase/mcp-server-supabase",
+      "homepage": "https://supabase.com",
+      "category": "database",
+      "tags": [
+        "supabase",
+        "postgres",
+        "auth",
+        "storage",
+        "backend"
+      ],
+      "installCmd": "npx -y @supabase/mcp-server-supabase@latest --access-token YOUR_TOKEN",
+      "configJson": "{\n  \"mcpServers\": {\n    \"supabase\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@supabase/mcp-server-supabase@latest\",\n        \"--access-token\",\n        \"YOUR_TOKEN\"\n      ]\n    }\n  }\n}",
+      "stars": 1850,
+      "featured": true,
+      "verified": true
+    },
+    {
+      "slug": "fetch",
+      "name": "Fetch",
+      "description": "Fetch and process web content with automatic markdown conversion",
+      "longDescription": "A simple but powerful fetch server that retrieves web pages and converts them to markdown for easy AI consumption. Handles redirects, JS-rendered pages, and pagination.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "homepage": null,
+      "category": "api",
+      "tags": [
+        "fetch",
+        "http",
+        "web",
+        "scraping"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-fetch",
+      "configJson": "{\n  \"mcpServers\": {\n    \"fetch\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-fetch\"\n      ]\n    }\n  }\n}",
+      "stars": 2800,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "sequential-thinking",
+      "name": "Sequential Thinking",
+      "description": "Dynamic problem-solving through structured, step-by-step reasoning",
+      "longDescription": "A specialized MCP server that helps AI assistants break down complex problems into sequential steps. Great for debugging, planning, and multi-step reasoning tasks.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "homepage": null,
+      "category": "ai",
+      "tags": [
+        "reasoning",
+        "thinking",
+        "planning",
+        "problem-solving"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-sequential-thinking",
+      "configJson": "{\n  \"mcpServers\": {\n    \"sequential-thinking\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-sequential-thinking\"\n      ]\n    }\n  }\n}",
+      "stars": 2600,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "gmail",
+      "name": "Gmail",
+      "description": "Read, send, and manage Gmail messages with full search support",
+      "longDescription": "Full Gmail integration. Search emails, read threads, send replies, apply labels, and manage your inbox with natural language commands.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/gmail",
+      "homepage": null,
+      "category": "communication",
+      "tags": [
+        "gmail",
+        "email",
+        "google",
+        "mail"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-gmail",
+      "configJson": "{\n  \"mcpServers\": {\n    \"gmail\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-gmail\"\n      ],\n      \"env\": {\n        \"GMAIL_OAUTH_CREDENTIALS\": \"YOUR_CREDENTIALS\"\n      }\n    }\n  }\n}",
+      "stars": 2240,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "sqlite",
+      "name": "SQLite",
+      "description": "Lightweight SQLite database access for local development and prototyping",
+      "longDescription": "A lightweight MCP server for SQLite. Great for local development, prototyping, and small applications. Supports schema inspection, queries, and basic CRUD operations.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+      "homepage": null,
+      "category": "database",
+      "tags": [
+        "sql",
+        "sqlite",
+        "database",
+        "local"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-sqlite --db-path ./app.db",
+      "configJson": "{\n  \"mcpServers\": {\n    \"sqlite\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-sqlite\",\n        \"--db-path\",\n        \"./app.db\"\n      ]\n    }\n  }\n}",
+      "stars": 2100,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "slack",
+      "name": "Slack",
+      "description": "Read and send Slack messages, search channels, and manage notifications",
+      "longDescription": "Integrate Slack directly into your AI workflow. Search messages, read channel history, send new messages, and even create channels. Bot token required.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+      "homepage": null,
+      "category": "productivity",
+      "tags": [
+        "slack",
+        "messaging",
+        "team",
+        "communication"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-slack",
+      "configJson": "{\n  \"mcpServers\": {\n    \"slack\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-slack\"\n      ],\n      \"env\": {\n        \"SLACK_BOT_TOKEN\": \"xoxb-your-token\"\n      }\n    }\n  }\n}",
+      "stars": 1980,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "openai",
+      "name": "OpenAI",
+      "description": "Generate embeddings and use OpenAI models as tools within MCP",
+      "longDescription": "Use OpenAI models as MCP tools. Generate embeddings for semantic search, run classification, and chain multiple OpenAI calls within your agent workflows.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/openai",
+      "homepage": null,
+      "category": "ai",
+      "tags": [
+        "openai",
+        "embeddings",
+        "llm",
+        "ai"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-openai",
+      "configJson": "{\n  \"mcpServers\": {\n    \"openai\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-openai\"\n      ],\n      \"env\": {\n        \"OPENAI_API_KEY\": \"sk-YOUR_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 1890,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "google-drive",
+      "name": "Google Drive",
+      "description": "Search and read files from your Google Drive",
+      "longDescription": "Search across your Google Drive, read document content, and retrieve metadata. Great for finding context without leaving your AI assistant.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-drive",
+      "homepage": null,
+      "category": "productivity",
+      "tags": [
+        "google",
+        "drive",
+        "docs",
+        "search"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-google-drive",
+      "configJson": "{\n  \"mcpServers\": {\n    \"google-drive\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-google-drive\"\n      ]\n    }\n  }\n}",
+      "stars": 1750,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "description": "Manage Cloudflare Workers, KV, R2, D1, and other Cloudflare services",
+      "longDescription": "Deploy Workers, manage KV stores, upload to R2 buckets, query D1 databases, and configure DNS — all from your AI assistant. Account ID and API token required.",
+      "author": "@cloudflare",
+      "repoUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "homepage": "https://cloudflare.com",
+      "category": "cloud",
+      "tags": [
+        "cloudflare",
+        "workers",
+        "edge",
+        "cdn"
+      ],
+      "installCmd": "npx -y @cloudflare/mcp-server-cloudflare",
+      "configJson": "{\n  \"mcpServers\": {\n    \"cloudflare\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@cloudflare/mcp-server-cloudflare\"\n      ],\n      \"env\": {\n        \"CLOUDFLARE_ACCOUNT_ID\": \"YOUR_ID\",\n        \"CLOUDFLARE_API_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 1670,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "discord",
+      "name": "Discord",
+      "description": "Read and send Discord messages, manage channels and roles",
+      "longDescription": "Connect to Discord servers, read message history, send messages, manage channels, and moderate. Bot token required.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/discord",
+      "homepage": null,
+      "category": "communication",
+      "tags": [
+        "discord",
+        "chat",
+        "bot",
+        "community"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-discord",
+      "configJson": "{\n  \"mcpServers\": {\n    \"discord\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-discord\"\n      ],\n      \"env\": {\n        \"DISCORD_TOKEN\": \"YOUR_BOT_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 1560,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "linear",
+      "name": "Linear",
+      "description": "Manage Linear issues, projects, and cycles from your AI assistant",
+      "longDescription": "Create, update, and query Linear issues. Search across projects, manage cycles, and triage bugs without leaving your editor or chat. Full Linear API access via MCP.",
+      "author": "@linear",
+      "repoUrl": "https://github.com/linear/linear-mcp-server",
+      "homepage": "https://linear.app",
+      "category": "productivity",
+      "tags": [
+        "linear",
+        "issues",
+        "project-management",
+        "tickets"
+      ],
+      "installCmd": "npx -y linear-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"linear\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"linear-mcp-server\"\n      ],\n      \"env\": {\n        \"LINEAR_API_KEY\": \"YOUR_API_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 1480,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "gitlab",
+      "name": "GitLab",
+      "description": "Manage GitLab projects, issues, merge requests, and pipelines",
+      "longDescription": "GitLab integration for project management, CI/CD pipeline monitoring, issue tracking, and merge request management. Supports both gitlab.com and self-hosted instances.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
+      "homepage": null,
+      "category": "devtools",
+      "tags": [
+        "gitlab",
+        "git",
+        "ci-cd",
+        "devops"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-gitlab",
+      "configJson": "{\n  \"mcpServers\": {\n    \"gitlab\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-gitlab\"\n      ],\n      \"env\": {\n        \"GITLAB_PERSONAL_ACCESS_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 1450,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "tavily",
+      "name": "Tavily Search",
+      "description": "AI-optimized web search built for LLMs and agents",
+      "longDescription": "Tavily is a search engine specifically built for AI agents and LLMs. Returns clean, relevant results optimized for AI consumption. Great for research workflows.",
+      "author": "@tavily-ai",
+      "repoUrl": "https://github.com/tavily-ai/tavily-mcp",
+      "homepage": "https://tavily.com",
+      "category": "search",
+      "tags": [
+        "search",
+        "ai",
+        "research",
+        "web"
+      ],
+      "installCmd": "npx -y tavily-mcp@latest",
+      "configJson": "{\n  \"mcpServers\": {\n    \"tavily\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"tavily-mcp@latest\"\n      ],\n      \"env\": {\n        \"TAVILY_API_KEY\": \"YOUR_API_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 1420,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "description": "Read and search your Obsidian vault from any AI assistant",
+      "longDescription": "Connect your Obsidian vault to AI. Search notes, read content, create new notes, and manage tags — perfect for personal knowledge management workflows.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/obsidian",
+      "homepage": null,
+      "category": "productivity",
+      "tags": [
+        "obsidian",
+        "notes",
+        "pkm",
+        "knowledge"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-obsidian",
+      "configJson": "{\n  \"mcpServers\": {\n    \"obsidian\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-obsidian\"\n      ],\n      \"env\": {\n        \"OBSIDIAN_VAULT_PATH\": \"/path/to/vault\"\n      }\n    }\n  }\n}",
+      "stars": 1340,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "jira",
+      "name": "Jira",
+      "description": "Create, update, and search Jira issues and sprints",
+      "longDescription": "Atlassian Jira integration for issue tracking, sprint management, and project reporting. Create tickets, update status, search with JQL, and manage boards without leaving your AI.",
+      "author": "@atlassian",
+      "repoUrl": "https://github.com/atlassian/atlassian-mcp-server",
+      "homepage": "https://atlassian.com",
+      "category": "productivity",
+      "tags": [
+        "jira",
+        "atlassian",
+        "issues",
+        "agile"
+      ],
+      "installCmd": "npx -y atlassian-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"jira\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"atlassian-mcp-server\"\n      ],\n      \"env\": {\n        \"ATLASSIAN_API_TOKEN\": \"YOUR_TOKEN\",\n        \"ATLASSIAN_EMAIL\": \"you@example.com\"\n      }\n    }\n  }\n}",
+      "stars": 1340,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "sentry",
+      "name": "Sentry",
+      "description": "Retrieve and analyze error reports from your Sentry projects",
+      "longDescription": "Pull error traces, stack traces, and issue details from Sentry. Let your AI assistant investigate bugs, suggest fixes, and triage errors in context.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sentry",
+      "homepage": "https://sentry.io",
+      "category": "devtools",
+      "tags": [
+        "sentry",
+        "errors",
+        "monitoring",
+        "debugging"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-sentry",
+      "configJson": "{\n  \"mcpServers\": {\n    \"sentry\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-sentry\"\n      ],\n      \"env\": {\n        \"SENTRY_AUTH_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 1320,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "vercel",
+      "name": "Vercel",
+      "description": "Manage Vercel deployments, projects, and environment variables",
+      "longDescription": "Deploy, inspect, and manage your Vercel projects. View deployment logs, manage env vars, promote deployments to production, and analyze performance.",
+      "author": "@vercel",
+      "repoUrl": "https://github.com/vercel/vercel-mcp-server",
+      "homepage": "https://vercel.com",
+      "category": "cloud",
+      "tags": [
+        "vercel",
+        "deploy",
+        "hosting",
+        "nextjs"
+      ],
+      "installCmd": "npx -y vercel-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"vercel\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"vercel-mcp-server\"\n      ],\n      \"env\": {\n        \"VERCEL_API_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 1180,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "figma",
+      "name": "Figma",
+      "description": "Read Figma files, get design tokens, and inspect components",
+      "longDescription": "Bring Figma designs into your AI workflow. Read design files, extract design tokens, inspect components, and bridge the gap between design and code.",
+      "author": "@figma",
+      "repoUrl": "https://github.com/figma/figma-mcp-server",
+      "homepage": "https://figma.com",
+      "category": "productivity",
+      "tags": [
+        "figma",
+        "design",
+        "ui",
+        "tokens"
+      ],
+      "installCmd": "npx -y figma-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"figma\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"figma-mcp-server\"\n      ],\n      \"env\": {\n        \"FIGMA_ACCESS_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 1120,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "mongodb",
+      "name": "MongoDB",
+      "description": "Query and manage MongoDB collections with full aggregation pipeline support",
+      "longDescription": "Connect to MongoDB clusters, browse collections, run aggregations, and manage indexes. Supports both local and Atlas connections.",
+      "author": "@mongodb-js",
+      "repoUrl": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "homepage": null,
+      "category": "database",
+      "tags": [
+        "mongodb",
+        "nosql",
+        "database",
+        "atlas"
+      ],
+      "installCmd": "npx -y mongodb-mcp-server --connectionString mongodb://localhost:27017",
+      "configJson": "{\n  \"mcpServers\": {\n    \"mongodb\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"mongodb-mcp-server\",\n        \"--connectionString\",\n        \"mongodb://localhost:27017\"\n      ]\n    }\n  }\n}",
+      "stars": 980,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "analytics",
+      "name": "Google Analytics",
+      "description": "Query traffic, engagement, and conversion data from GA4",
+      "longDescription": "Pull analytics data directly into your AI conversations. Query pageviews, sessions, conversions, user demographics, and traffic sources using natural language.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-analytics",
+      "homepage": null,
+      "category": "data",
+      "tags": [
+        "analytics",
+        "google",
+        "traffic",
+        "metrics"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-google-analytics",
+      "configJson": "{\n  \"mcpServers\": {\n    \"analytics\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-google-analytics\"\n      ],\n      \"env\": {\n        \"GA_PROPERTY_ID\": \"YOUR_ID\"\n      }\n    }\n  }\n}",
+      "stars": 980,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "time",
+      "name": "Time",
+      "description": "Get current time, convert timezones, and perform time calculations",
+      "longDescription": "Simple but essential. Get the current time in any timezone, convert between timezones, and perform time-based calculations. Great for scheduling and planning workflows.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "homepage": null,
+      "category": "devtools",
+      "tags": [
+        "time",
+        "timezone",
+        "date",
+        "utility"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-time",
+      "configJson": "{\n  \"mcpServers\": {\n    \"time\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-time\"\n      ]\n    }\n  }\n}",
+      "stars": 890,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "shopify",
+      "name": "Shopify",
+      "description": "Manage Shopify stores — products, orders, customers, and inventory",
+      "longDescription": "Full Shopify admin integration. Manage products, fulfill orders, query customers, and sync inventory. Perfect for ecommerce founders and store managers.",
+      "author": "@shopify",
+      "repoUrl": "https://github.com/shopify/mcp-server",
+      "homepage": "https://shopify.com",
+      "category": "data",
+      "tags": [
+        "shopify",
+        "ecommerce",
+        "store",
+        "products"
+      ],
+      "installCmd": "npx -y @shopify/mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"shopify\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@shopify/mcp-server\"\n      ],\n      \"env\": {\n        \"SHOPIFY_ACCESS_TOKEN\": \"YOUR_TOKEN\",\n        \"SHOPIFY_STORE\": \"your-store.myshopify.com\"\n      }\n    }\n  }\n}",
+      "stars": 890,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "exa",
+      "name": "Exa Search",
+      "description": "Neural search engine for finding the most relevant content",
+      "longDescription": "Exa provides neural-powered search that understands semantics, not just keywords. Perfect for research, finding similar content, and retrieving specific types of pages.",
+      "author": "@exa-labs",
+      "repoUrl": "https://github.com/exa-labs/exa-mcp-server",
+      "homepage": "https://exa.ai",
+      "category": "search",
+      "tags": [
+        "search",
+        "neural",
+        "ai",
+        "research"
+      ],
+      "installCmd": "npx -y exa-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"exa\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"exa-mcp-server\"\n      ],\n      \"env\": {\n        \"EXA_API_KEY\": \"YOUR_API_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 870,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "everart",
+      "name": "EverArt",
+      "description": "Generate images from text prompts using AI models",
+      "longDescription": "AI image generation server. Create images from text descriptions, generate variations, and integrate visual content creation into your AI workflows.",
+      "author": "@modelcontextprotocol",
+      "repoUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/everart",
+      "homepage": null,
+      "category": "ai",
+      "tags": [
+        "image",
+        "generation",
+        "ai",
+        "art"
+      ],
+      "installCmd": "npx -y @modelcontextprotocol/server-everart",
+      "configJson": "{\n  \"mcpServers\": {\n    \"everart\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-everart\"\n      ],\n      \"env\": {\n        \"EVERART_API_KEY\": \"YOUR_KEY\"\n      }\n    }\n  }\n}",
+      "stars": 760,
+      "featured": false,
+      "verified": true
+    },
+    {
+      "slug": "twilio",
+      "name": "Twilio",
+      "description": "Send SMS, make calls, and manage Twilio messaging",
+      "longDescription": "Send SMS messages, initiate phone calls, and manage Twilio messaging workflows. Great for notification systems, OTP flows, and customer outreach.",
+      "author": "@twilio",
+      "repoUrl": "https://github.com/twilio/twilio-mcp-server",
+      "homepage": "https://twilio.com",
+      "category": "communication",
+      "tags": [
+        "twilio",
+        "sms",
+        "phone",
+        "messaging"
+      ],
+      "installCmd": "npx -y twilio-mcp-server",
+      "configJson": "{\n  \"mcpServers\": {\n    \"twilio\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"twilio-mcp-server\"\n      ],\n      \"env\": {\n        \"TWILIO_ACCOUNT_SID\": \"YOUR_SID\",\n        \"TWILIO_AUTH_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}",
+      "stars": 720,
+      "featured": false,
+      "verified": true
+    }
+  ]
+}
